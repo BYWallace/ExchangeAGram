@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FE0BA2FA1AEC25DF00A29FC7 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0BA2F91AEC25DF00A29FC7 /* FilterViewController.swift */; };
+		FE0BA2FC1AEC313000A29FC7 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0BA2FB1AEC313000A29FC7 /* FilterCell.swift */; };
 		FE95FCAF1ACB7C4100F90118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE95FCAE1ACB7C4100F90118 /* AppDelegate.swift */; };
 		FE95FCB21ACB7C4100F90118 /* ExchangeAGram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE95FCB01ACB7C4100F90118 /* ExchangeAGram.xcdatamodeld */; };
 		FE95FCB71ACB7C4100F90118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE95FCB51ACB7C4100F90118 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		FE0BA2F91AEC25DF00A29FC7 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		FE0BA2FB1AEC313000A29FC7 /* FilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		FE95FCA91ACB7C4100F90118 /* ExchangeAGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeAGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE95FCAD1ACB7C4100F90118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE95FCAE1ACB7C4100F90118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				FE95FCD11ACB7DDD00F90118 /* FeedViewController.swift */,
 				FE0BA2F91AEC25DF00A29FC7 /* FilterViewController.swift */,
 				FE95FCD31ACB7FD000F90118 /* FeedCell.swift */,
+				FE0BA2FB1AEC313000A29FC7 /* FilterCell.swift */,
 				FE95FCB51ACB7C4100F90118 /* Main.storyboard */,
 				FE95FCB81ACB7C4100F90118 /* Images.xcassets */,
 				FE95FCBA1ACB7C4100F90118 /* LaunchScreen.xib */,
@@ -228,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE0BA2FC1AEC313000A29FC7 /* FilterCell.swift in Sources */,
 				FE0BA2FA1AEC25DF00A29FC7 /* FilterViewController.swift in Sources */,
 				FE95FCAF1ACB7C4100F90118 /* AppDelegate.swift in Sources */,
 				FE95FCD41ACB7FD000F90118 /* FeedCell.swift in Sources */,
