@@ -18,6 +18,8 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
     var context:CIContext = CIContext(options: nil)
     
     var filters:[CIFilter] = []
+    
+    let placeHolderImage = UIImage(named: "Placeholder")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,20 +53,23 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
         let cell:FilterCell = collectionView.dequeueReusableCellWithReuseIdentifier("MyCell", forIndexPath: indexPath) as! FilterCell
         
-        cell.imageView.image = UIImage(named: "Placeholder")
-        
-        let filterQueue:dispatch_queue_t = dispatch_queue_create("filter queue", nil)
-        
-        dispatch_async(filterQueue, { () -> Void in
-            let filterImage = self.filteredImageFromImage(self.thisFeedItem.thumbNail, filter: self.filters[indexPath.row])
+        if cell.imageView.image == nil {
+            cell.imageView.image = placeHolderImage
             
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                cell.imageView.image = filterImage
+            let filterQueue:dispatch_queue_t = dispatch_queue_create("filter queue", nil)
+            
+            dispatch_async(filterQueue, { () -> Void in
+                let filterImage = self.filteredImageFromImage(self.thisFeedItem.thumbNail, filter: self.filters[indexPath.row])
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    cell.imageView.image = filterImage
+                })
             })
-        })
-        
+        }
+    
         return cell
     }
     
@@ -83,6 +88,7 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         let sepia = CIFilter(name: "CISepiaTone")
         sepia.setValue(kIntesity, forKey: kCIInputIntensityKey)
+//        This doesn't work at the moment.
         
 //        let colorClamp = CIFilter(name: "CIColorClamp")
 //        colorClamp.setValue(CIVector(x: 0.9, y: 0.9, z: 0.9, w: 0.9), forKey: "inputMaxComponents")
