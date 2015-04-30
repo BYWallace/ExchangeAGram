@@ -19,6 +19,7 @@
 		FE95FCD21ACB7DDD00F90118 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE95FCD11ACB7DDD00F90118 /* FeedViewController.swift */; };
 		FE95FCD41ACB7FD000F90118 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE95FCD31ACB7FD000F90118 /* FeedCell.swift */; };
 		FE95FCD61ACB816500F90118 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE95FCD51ACB816500F90118 /* MobileCoreServices.framework */; };
+		FED47D431AF2D40900FC242E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED47D421AF2D40900FC242E /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		FE95FCD11ACB7DDD00F90118 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		FE95FCD31ACB7FD000F90118 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		FE95FCD51ACB816500F90118 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		FED47D421AF2D40900FC242E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				FE0BA2F91AEC25DF00A29FC7 /* FilterViewController.swift */,
 				FE95FCD31ACB7FD000F90118 /* FeedCell.swift */,
 				FE0BA2FB1AEC313000A29FC7 /* FilterCell.swift */,
+				FED47D421AF2D40900FC242E /* ProfileViewController.swift */,
 				FE5000451AEEF1AE000B1069 /* Model */,
 				FE95FCB51ACB7C4100F90118 /* Main.storyboard */,
 				FE95FCB81ACB7C4100F90118 /* Images.xcassets */,
@@ -245,6 +248,7 @@
 				FE95FCD41ACB7FD000F90118 /* FeedCell.swift in Sources */,
 				FE95FCD21ACB7DDD00F90118 /* FeedViewController.swift in Sources */,
 				FE5000441AEEF19A000B1069 /* FeedItem.swift in Sources */,
+				FED47D431AF2D40900FC242E /* ProfileViewController.swift in Sources */,
 				FE95FCB21ACB7C4100F90118 /* ExchangeAGram.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

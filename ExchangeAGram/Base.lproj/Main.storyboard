@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0Bd-TN-smi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0Bd-TN-smi">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--Feed View Controller-->
@@ -59,6 +59,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="P92-md-E7d">
+                        <barButtonItem key="leftBarButtonItem" title="Profile" id="pwR-xb-xp3"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="oKE-9t-Om9">
                             <connections>
                                 <action selector="snapBarButtonTapped:" destination="BYZ-38-t0r" id="XV0-Nx-RqN"/>
@@ -67,11 +68,45 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="uBP-KF-YaE" id="IAq-7K-glE"/>
+                        <segue destination="pVk-OX-upE" kind="show" identifier="profileSegue" id="rXB-ix-PWL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1137" y="387"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="gNw-zT-7SG">
+            <objects>
+                <viewController id="pVk-OX-upE" customClass="ProfileViewController" customModule="ExchangeAGram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cF1-Dl-Zv9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cpj-4W-uUA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S8F-Im-FEW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3cR-vl-PC6">
+                                <rect key="frame" x="16" y="72" width="100" height="100"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwc-Zu-pvQ">
+                                <rect key="frame" x="124" y="111" width="276" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="Iwc-Zu-pvQ" id="Jgp-fv-YdM"/>
+                        <outlet property="profileImageView" destination="3cR-vl-PC6" id="sq8-kK-38b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E3l-e7-mhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1876" y="387"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2by-op-vPb">
