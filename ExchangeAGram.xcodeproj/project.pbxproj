@@ -21,6 +21,8 @@
 		FE95FCD41ACB7FD000F90118 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE95FCD31ACB7FD000F90118 /* FeedCell.swift */; };
 		FE95FCD61ACB816500F90118 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE95FCD51ACB816500F90118 /* MobileCoreServices.framework */; };
 		FED47D431AF2D40900FC242E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED47D421AF2D40900FC242E /* ProfileViewController.swift */; };
+		FEDDC9F91B124603007D0304 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDDC9F81B124603007D0304 /* MapViewController.swift */; };
+		FEDDC9FB1B1248B6007D0304 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDDC9FA1B1248B6007D0304 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		FE95FCD31ACB7FD000F90118 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		FE95FCD51ACB816500F90118 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		FED47D421AF2D40900FC242E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FEDDC9F81B124603007D0304 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FEDDC9FA1B1248B6007D0304 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEDDC9FB1B1248B6007D0304 /* MapKit.framework in Frameworks */,
 				FE95FCD61ACB816500F90118 /* MobileCoreServices.framework in Frameworks */,
 				FE5D6E731B0BDC2600431F8C /* FacebookSDK.framework in Frameworks */,
 			);
@@ -111,9 +116,10 @@
 				FE95FCD31ACB7FD000F90118 /* FeedCell.swift */,
 				FE0BA2FB1AEC313000A29FC7 /* FilterCell.swift */,
 				FED47D421AF2D40900FC242E /* ProfileViewController.swift */,
+				FEDDC9F81B124603007D0304 /* MapViewController.swift */,
+				FE95FCB51ACB7C4100F90118 /* Main.storyboard */,
 				FE5D6E741B0BDD8400431F8C /* Bridging-Header.h */,
 				FE5000451AEEF1AE000B1069 /* Model */,
-				FE95FCB51ACB7C4100F90118 /* Main.storyboard */,
 				FE95FCB81ACB7C4100F90118 /* Images.xcassets */,
 				FE95FCBA1ACB7C4100F90118 /* LaunchScreen.xib */,
 				FE95FCAC1ACB7C4100F90118 /* Supporting Files */,
@@ -124,6 +130,7 @@
 		FE95FCAC1ACB7C4100F90118 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FEDDC9FA1B1248B6007D0304 /* MapKit.framework */,
 				FE5D6E721B0BDC2600431F8C /* FacebookSDK.framework */,
 				FE95FCD51ACB816500F90118 /* MobileCoreServices.framework */,
 				FE95FCAD1ACB7C4100F90118 /* Info.plist */,
@@ -252,6 +259,7 @@
 				FE0BA2FA1AEC25DF00A29FC7 /* FilterViewController.swift in Sources */,
 				FE95FCAF1ACB7C4100F90118 /* AppDelegate.swift in Sources */,
 				FE95FCD41ACB7FD000F90118 /* FeedCell.swift in Sources */,
+				FEDDC9F91B124603007D0304 /* MapViewController.swift in Sources */,
 				FE95FCD21ACB7DDD00F90118 /* FeedViewController.swift in Sources */,
 				FE5000441AEEF19A000B1069 /* FeedItem.swift in Sources */,
 				FED47D431AF2D40900FC242E /* ProfileViewController.swift in Sources */,
