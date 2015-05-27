@@ -20,6 +20,9 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let backgroundImage = UIImage(named: "OceanBackGround")
+        self.view.backgroundColor = UIColor(patternImage: backgroundImage!)
 
         // Do any additional setup after loading the view.
         locationManager = CLLocationManager()
