@@ -171,6 +171,8 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         self.thisFeedItem.caption = caption
         
+        self.thisFeedItem.filtered = true
+        
         (UIApplication.sharedApplication().delegate as! AppDelegate).saveContext()
         
         self.navigationController?.popViewControllerAnimated(true)
@@ -187,7 +189,8 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
         FBDialogs.presentShareDialogWithPhotoParams(params, clientState: nil) { (call, result, error) -> Void in
             if (result != nil) {
                 println(result)
-            } else {
+            }
+            else {
                 println(error)
             }
         }
@@ -214,10 +217,13 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
         var image:UIImage
         
         if NSFileManager.defaultManager().fileExistsAtPath(uniquePath) {
-            image = UIImage(contentsOfFile: uniquePath)!
-        } else {
+            var returnedImage = UIImage(contentsOfFile: uniquePath)!
+            image = UIImage(CGImage: returnedImage.CGImage, scale: 1.0, orientation: UIImageOrientation.Right)!
+        }
+        else {
             self.cacheImage(imageNumber)
-            image = UIImage(contentsOfFile: uniquePath)!
+            var returnedImage = UIImage(contentsOfFile: uniquePath)!
+            image = UIImage(CGImage: returnedImage.CGImage, scale: 1.0, orientation: UIImageOrientation.Right)!
         }
         
         return image

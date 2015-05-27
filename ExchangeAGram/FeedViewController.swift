@@ -72,7 +72,8 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
             cameraController.allowsEditing = false
             
             self.presentViewController(cameraController, animated: true, completion: nil)
-        } else if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary){
+        }
+        else if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary){
             var photoLibraryController = UIImagePickerController()
             
             photoLibraryController.delegate = self
@@ -83,7 +84,8 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
             photoLibraryController.allowsEditing = false
             
             self.presentViewController(photoLibraryController, animated: true, completion: nil)
-        } else {
+        }
+        else {
             var alertController = UIAlertController(title: "Alert", message: "Your device does not support the camera or photo library", preferredStyle: UIAlertControllerStyle.Alert)
             
             alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
@@ -115,6 +117,8 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         let UUID = NSUUID().UUIDString
         feedItem.uniqueID = UUID
         
+        feedItem.filtered = false
+        
         (UIApplication.sharedApplication().delegate as! AppDelegate).saveContext()
         
         feedArray.append(feedItem)
@@ -138,6 +142,14 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         var cell:FeedCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! FeedCell
         
         let thisItem = feedArray[indexPath.row] as! FeedItem
+        
+        if thisItem.filtered == true {
+            let returnedImage = UIImage(data: thisItem.image)!
+            let image = UIImage(CGImage: returnedImage.CGImage, scale: 1.0, orientation: UIImageOrientation.Right)
+        }
+        else {
+            cell.imageView.image = UIImage(data: thisItem.image)
+        }
         
         cell.imageView.image = UIImage(data: thisItem.image)
         cell.captionLabel.text = thisItem.caption
