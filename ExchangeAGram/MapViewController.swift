@@ -25,6 +25,22 @@ class MapViewController: UIViewController {
         let itemArray = context.executeFetchRequest(request, error: &error)
         println(error)
         
+        if itemArray!.count > 0 {
+            for item in itemArray! {
+                let location = CLLocationCoordinate2D(latitude: Double(item.latitude), longitude: Double(item.longitude))
+                let span = MKCoordinateSpanMake(0.05, 0.05)
+                let region = MKCoordinateRegionMake(location, span)
+                
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = location
+                annotation.title = item.caption
+                
+                // TODO: Not ideal, should refactor to set whole map or pick a marker rather than re-run
+                mapView.setRegion(region, animated: true)
+                mapView.addAnnotation(annotation)
+            }
+        }
+        
 //        let location = CLLocationCoordinate2D(latitude: 48.868639224587, longitude: 2.37119161036255)
 //        let span = MKCoordinateSpanMake(0.05, 0.05)
 //        let region = MKCoordinateRegionMake(location, span)
