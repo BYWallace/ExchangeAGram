@@ -107,8 +107,13 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         feedItem.caption = "test caption"
         feedItem.thumbNail = thumbNailData
         
-        feedItem.latitude = locationManager.location.coordinate.latitude
-        feedItem.longitude = locationManager.location.coordinate.longitude
+        if let location = locationManager.location {
+            feedItem.latitude = locationManager.location.coordinate.latitude
+            feedItem.longitude = locationManager.location.coordinate.longitude
+        }
+        
+        let UUID = NSUUID().UUIDString
+        feedItem.uniqueID = UUID
         
         (UIApplication.sharedApplication().delegate as! AppDelegate).saveContext()
         
