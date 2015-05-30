@@ -99,22 +99,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PlaceHolderImage" translatesAutoresizingMaskIntoConstraints="NO" id="3cR-vl-PC6">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlaceHolderImage" translatesAutoresizingMaskIntoConstraints="NO" id="3cR-vl-PC6">
                                 <rect key="frame" x="16" y="72" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="WAd-jN-AJg"/>
+                                    <constraint firstAttribute="height" constant="100" id="feh-rt-5gJ"/>
+                                </constraints>
                             </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwc-Zu-pvQ">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwc-Zu-pvQ">
                                 <rect key="frame" x="16" y="180" width="185" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="4sc-VY-Sed"/>
+                                    <constraint firstAttribute="height" constant="45" id="T5g-8X-bHI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ag4-Cr-rON" customClass="FBLoginView">
-                                <rect key="frame" x="176" y="273" width="248" height="54"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3G-tC-Oh1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3G-tC-Oh1">
                                 <rect key="frame" x="455" y="71" width="129" height="102"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="GJu-xL-Kty"/>
+                                    <constraint firstAttribute="width" constant="129" id="iXU-ks-Q4K"/>
+                                </constraints>
                                 <state key="normal" image="MapIcon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -122,8 +130,26 @@
                                     <action selector="mapViewButtonTapped:" destination="pVk-OX-upE" eventType="touchUpInside" id="niv-3V-gDX"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ag4-Cr-rON" customClass="FBLoginView">
+                                <rect key="frame" x="176" y="273" width="248" height="54"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="248" id="aHB-DP-rih"/>
+                                    <constraint firstAttribute="height" constant="54" id="fwn-Bu-dHr"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j3G-tC-Oh1" firstAttribute="trailing" secondItem="S8F-Im-FEW" secondAttribute="trailingMargin" id="2pG-9q-iox"/>
+                            <constraint firstItem="3cR-vl-PC6" firstAttribute="top" secondItem="S8F-Im-FEW" secondAttribute="topMargin" constant="72" id="6ek-gL-BuX"/>
+                            <constraint firstItem="j3G-tC-Oh1" firstAttribute="top" secondItem="S8F-Im-FEW" secondAttribute="topMargin" constant="71" id="N4r-fK-jgs"/>
+                            <constraint firstItem="Iwc-Zu-pvQ" firstAttribute="leading" secondItem="S8F-Im-FEW" secondAttribute="leadingMargin" id="V20-vY-RNq"/>
+                            <constraint firstItem="Iwc-Zu-pvQ" firstAttribute="top" secondItem="3cR-vl-PC6" secondAttribute="bottom" constant="8" id="dUT-Gh-3FY"/>
+                            <constraint firstItem="3cR-vl-PC6" firstAttribute="leading" secondItem="S8F-Im-FEW" secondAttribute="leadingMargin" id="foM-do-vNG"/>
+                            <constraint firstAttribute="centerX" secondItem="ag4-Cr-rON" secondAttribute="centerX" id="hrk-Bj-2LF"/>
+                            <constraint firstAttribute="centerY" secondItem="ag4-Cr-rON" secondAttribute="centerY" id="iL2-oQ-LLm"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="fbLoginView" destination="ag4-Cr-rON" id="7mu-ge-1gk"/>
